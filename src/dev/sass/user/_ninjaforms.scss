@@ -1,0 +1,32 @@
+/* 
+* Ninjaforms
+
+*/
+
+//post 14 is contact page
+// Removes required text and required asterix
+.post-14,
+.post-246 {
+  .wp-block-ninja-forms-form {
+
+    .nf-form-fields-required {
+      display: none;
+    }
+
+    .ninja-forms-req-symbol {
+      display: none;
+    }
+  }
+
+
+  .nf-form-title {
+
+  }
+}
+
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}

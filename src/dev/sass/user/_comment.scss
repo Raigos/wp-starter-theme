@@ -1,0 +1,49 @@
+.comment-meta {
+  display: grid;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-template-rows: 4rem 4rem auto;
+  grid-template-columns: auto 2fr;
+  margin-top: 2rem;
+  
+  grid-template-areas: 
+    "avatar author"
+    "avatar meta"
+    "wait wait";
+
+
+  .avatar {
+    grid-area: avatar;
+    margin-right: 2rem;
+  }
+
+
+  .comment-meta__author {
+    grid-area: author;
+    //should place into typography
+    font-size: 3rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+
+    span {
+      font-style: italic;
+      text-transform: initial;
+    }
+  }
+
+
+  .comment-metadata {
+    grid-area: meta;
+  }
+
+  .comment-awaiting-moderation {
+    grid-area: wait;
+  }
+}
+
+.comment-content {
+  p {
+    margin: 1rem 0;
+  }
+}
+

@@ -1,0 +1,139 @@
+/*
+ * peaks siia tegema väikse sisekorra
+ * Reigo peaks üle vaatame line heighte
+ * vanemad ja uuemad positused tahavad paremat asukohta
+ * ^ vb uuem ja vanem lihtsalt ära vahetada numbritega
+ * käi blog-archive-sinlge koos wp hiearchyaga üle, kontorlli, et kas igal fileil on ikka korrektne nimetus
+ */
+
+.post {
+  display: grid;
+  justify-content: center;
+  gap: 3rem;
+  // margin: 0 -2rem 12rem;
+  //y-side nav tekib postiuse all
+  margin: 0 0 12rem;
+  // padding: 0 2rem;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto minmax(100%, 24rem) auto 5rem;
+  grid-template-areas:
+    "header   header"
+    "date     date"
+    "text     text "
+    "text     text "
+    "readmore comments";
+
+
+  .entry-header {
+    grid-area: header;
+
+    a {
+      display: block;
+    }
+  }
+
+
+    .entry-date {
+      grid-area: date;
+      margin-top: -3rem;
+  }
+
+
+  .post-thumbnail {
+    grid-area: pic;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  .entry-content {
+    grid-area: text;
+
+    p {
+      margin: 0;
+      line-height: 1.5833;
+      //reigo võiks double checkida line heighti
+    }
+  }
+
+
+  .archive-read-more,
+  .comments__bubble {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .archive-read-more {
+    grid-area: readmore;
+    justify-content: flex-start;
+  }
+
+
+  .comments__bubble {
+    grid-area: comments;
+    justify-content: center;
+    &--custom {
+      height: auto;
+      width: auto;
+    }
+  }
+}
+
+
+.has-post-thumbnail {
+  grid-template-areas:
+    "header   header"
+    "date     date"
+    "pic      pic "
+    "text     text "
+    "readmore comments";
+}
+
+
+
+@media (min-width: 576px) {
+  .post {
+    padding: 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .post {
+    // margin: 0 -2rem 16rem;
+    //y-side nav tekib postiuse all
+    margin: 0 0 16rem;
+    grid-template-columns: 32rem 1fr 1fr;
+    grid-template-rows: auto auto auto 5rem ;
+
+    grid-template-areas:
+    "header   header    header"
+    "date     .         ."
+    "text     text      text "
+    "readmore .         comments";
+  }
+
+
+  .has-post-thumbnail {
+    grid-template-rows: auto auto 24rem 5rem ;
+    grid-template-areas:
+    "header header    header"
+    "date   .         ."
+    "pic    text      text "
+    "pic    readmore  comments";
+
+  }
+
+
+  .entry-content {
+    p {
+      // max-height: 24rem;
+      overflow-y: hidden;
+    }
+  }
+}

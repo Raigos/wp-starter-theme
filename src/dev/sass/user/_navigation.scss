@@ -1,0 +1,115 @@
+.site-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.2rem;
+
+  background-color: grey;
+  margin-bottom: 2.4rem;
+}
+
+.site-title {
+  margin: 0;
+}
+
+.main-navigation ul {
+  display: block;
+  position: absolute;
+  right:0;
+  z-index:2;
+  // height: 0;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: top;  
+  // width: 0;
+  overflow-y: hidden;
+  transition: transform 0.3s ease-in;
+  
+  background-color: grey;
+}
+
+.main-navigation.toggled ul {
+  transform: scaleY(1);
+}
+
+.main-navigation li {
+ position:relative;
+}
+
+.maria-pic {
+  height: 20px;
+}
+
+//KUI MINNA ARVUTI VAATEST TAHVLISSE TEEB TA IKKAGI SELLE 0.3 
+// animatsiooni
+
+// Small devices (landscape phones, 576px and up)  
+@media screen and (min-width: 576px) {
+  .main-navigation ul {
+    display: grid;
+    align-items: center;
+    text-align:  center;
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+   
+  .main-navigation li {
+    line-height: 79px;
+    border-right:  1px solid darkgreen;
+    border-bottom: 1px solid darkgreen;
+  }
+    
+  .main-navigation a {
+  height: 100%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    gap: 0 1.6rem;
+    height: auto;
+    width:  auto;
+    position: static;
+    overflow-y: auto;
+    transition: none;
+    transform: scaleY(1);
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+  }
+  
+  .main-navigation li {
+    line-height: normal;
+    border: 0;
+   }
+   
+  // .menu-default-container {
+  //   position: static;
+  //   left: auto;
+  //  }
+
+  // .main-navigation ul {
+  //   height: auto;
+  //   display: grid;
+  //   grid-auto-flow: column;
+  //   align-items: center;
+  //   justify-content: flex-end;
+  //   gap: 0 16px;
+  // }
+
+  // .main-navigation.toggled ul {
+  //   grid-template-columns: auto;
+  // }
+}
+
+  // Large devices (desktops, 992px and up)
+  @media screen and (min-width: 992px) {
+}
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+}
