@@ -279,3 +279,11 @@ function initMap() {
   }
 }
 add_action('wp_head', 'wpb_hook_javascript');
+
+
+// Allow to change the default Gutenberg editor view width
+function reigo_add_editor_styles() {
+  add_editor_style( 'gutenberg-editor.css' );
+}
+add_action( 'admin_init', 'reigo_add_editor_styles' );
+add_theme_support( 'editor-styles' );
