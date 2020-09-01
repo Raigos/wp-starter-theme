@@ -260,9 +260,10 @@ function unset_url_field($fields){
 
 //adds google maps to contact page
 function wpb_hook_javascript() {
-  if (get_page ('14')) { 
+  if (is_page ('246')) { 
     ?>
     <script>
+      console.log('test')
 function initMap() {
   var juurdeveo = {lat: 59.4138195, lng: 24.7295485};
   var map = new google.maps.Map(
