@@ -1,36 +1,32 @@
 .site-header {
-    margin: 50px 0;
-    background-color: #fff;
+	margin: 50px 0;
+	background-color: #fff;
 }
 
 .main-navigation ul {
-    background-color: transparent;
-    display: grid;  /*wtf. pausi ajal muutus main menu display none-ks milelgipärast?? */
+	background-color: transparent;
+	display: grid; /*wtf. pausi ajal muutus main menu display none-ks milelgipärast?? */
 }
 .main-navigation a {
-    font-family: var(--font-headings);
-    font-size: 22px;
-    color: black;
-    text-align: center;
-    white-space: nowrap;
-    margin: 0 20px;
-
+	font-family: var(--font-headings);
+	font-size: 22px;
+	color: black;
+	text-align: center;
+	white-space: nowrap;
+	margin: 0 20px;
 }
-
 
 li {
-    font-size: 2.5rem;
-    line-height: 1.8;
-    color: var(--color-body);
-    font-family: var(--font-main);
+	font-size: 2.5rem;
+	line-height: 1.8;
+	color: $color-body;
+	font-family: $font-main;
 }
-
 
 li {
-    margin-bottom: 0;
-    list-style-position: outside;
+	margin-bottom: 0;
+	list-style-position: outside;
 }
-
 
 // // set main content width
 // .site-main {
@@ -39,12 +35,7 @@ li {
 //     margin: 0 auto;
 // }
 
-
 .site-footer {
-    background: rgb(255, 132, 124) none repeat scroll 0% 0%;
-    padding: 10px;
+	background: rgb(255, 132, 124) none repeat scroll 0% 0%;
+	padding: 10px;
 }
-
-
-
-

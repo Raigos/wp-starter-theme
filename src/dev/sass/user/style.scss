@@ -1,15 +1,13 @@
 // Vendors
-@import "./vendors/hamburger/hamburgers.scss";
+@import "./vendors/hamburger/hamburgers";
 @import "./vendors/vendors";
 
 // Base
 @import "./base/_variables.scss";
 
 // Typography
-@import "./typography/fonts";
-@import "./typography/copy";
-@import "./typography/headers";
 @import "./typography/body";
+@import "./typography/headings";
 
 // Layout
 @import "./layout/container";

@@ -1,30 +1,30 @@
 .comments-area {
-  // width: 100%;
-  // max-width: 96rem;
-  // margin: 0 auto;
-  // padding: 0 2rem;
+	// width: 100%;
+	// max-width: 96rem;
+	// margin: 0 auto;
+	// padding: 0 2rem;
 
-  textarea {
-    width: 100%;
-    height: 170px;
-    padding: 25px 30px;
-    background: var(--input-background-color);
-    border: 2px solid var(--input-background-color);
-    border-radius: 25px;
-    color: #494949;
-    font-size: 15px;
-    font-weight: normal;
-    letter-spacing: 0.3px;
-    transition: all 300ms ease;
+	textarea {
+		width: 100%;
+		height: 170px;
+		padding: 25px 30px;
+		background: $input-background-color;
+		border: 2px solid $input-background-color;
+		border-radius: 25px;
+		color: #494949;
+		font-size: 15px;
+		font-weight: normal;
+		letter-spacing: 0.3px;
+		transition: all 300ms ease;
 
-    &:focus {
-      border-color: #d8d8d8;
+		&:focus {
+			border-color: #d8d8d8;
 
-      // fix these
-      -moz-outline-radius: 25px;
-      outline: none;
-    }
-  }
+			// fix these
+			-moz-outline-radius: 25px;
+			outline: none;
+		}
+	}
 }
 
 /* .comments__bubble {
@@ -41,7 +41,7 @@
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: var(--color-brand);
+	border-top-color: $color-brand;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
@@ -49,124 +49,124 @@
 } */
 
 .comments__bubble {
-  background-color: #efefef;
-  border-radius: 25px;
-  font-size: 18px;
-  height: 42px;
-  width: 42px;
-  padding: 10px;
+	background-color: #efefef;
+	border-radius: 25px;
+	font-size: 18px;
+	height: 42px;
+	width: 42px;
+	padding: 10px;
 
-  & a {
-    text-decoration: none;
-  }
+	& a {
+		text-decoration: none;
+	}
 }
 
 .comment-list {
-  margin: 0 0 10rem 0;
-  padding: 0;
+	margin: 0 0 10rem 0;
+	padding: 0;
 }
 
 .comment-form {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 0 1rem;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 0 1rem;
 
-  .required {
-    display: none;
-  }
+	.required {
+		display: none;
+	}
 }
 
 .comment-form-comment {
-  grid-column: 1/-1;
-  border-radius: 8px;
-  margin: 0;
+	grid-column: 1/-1;
+	border-radius: 8px;
+	margin: 0;
 }
 
 .comment-form-url {
-  grid-column: 1/-1;
+	grid-column: 1/-1;
 }
 
 .comment-form-cookies-consent {
-  grid-column: 1/-1;
-  margin: 0;
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
+	grid-column: 1/-1;
+	margin: 0;
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
 }
 
 .comment-notes {
-  display: none;
-  //remove it from the functions instead here
+	display: none;
+	//remove it from the functions instead here
 }
 
 #author,
 #email,
 #url,
 textarea#comment {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 2px solid black;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 2px solid black;
 }
 
 #commentform label[for="comment"] {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 .comment-form-author,
 .comment-form-email {
-  margin: 0;
+	margin: 0;
 }
 
 .comment-form-cookies-consent input[type="checkbox"],
 .comment-subscription-form input[type="checkbox"],
 .mc4wp-checkbox input[type="checkbox"] {
-  margin-right: 1rem;
-  position: relative;
-  top: -2px;
+	margin-right: 1rem;
+	position: relative;
+	top: -2px;
 }
 input[type="checkbox"],
 input[type="radio"] {
-  padding: 0;
+	padding: 0;
 }
 #commentform label {
-  display: block;
+	display: block;
 }
 
 .comment-form-cookies-consent,
 .comment-subscription-form,
 .mc4wp-checkbox {
-  color: #7a7a8c;
-  grid-column: 1/-1;
-  display: flex;
-  align-items: center;
+	color: #7a7a8c;
+	grid-column: 1/-1;
+	display: flex;
+	align-items: center;
 }
 
 #commentform label {
-  display: block;
+	display: block;
 }
 
 .form-submit {
-  grid-column: 1/-1;
-  text-align: right;
-  margin-top: 1rem;
+	grid-column: 1/-1;
+	text-align: right;
+	margin-top: 1rem;
 }
 
 .comment-reply-title {
-  // font-family: var(--font-headings);
-  line-height: 1.25;
-  font-weight: 700;
-  font-size: 4rem;
-  margin: 0 0 3rem;
-  line-height: 1;
+	// font-family: var(--font-headings);
+	line-height: 1.25;
+	font-weight: 700;
+	font-size: 4rem;
+	margin: 0 0 3rem;
+	line-height: 1;
 }
 
 .respond {
-padding-top: 2rem;
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: 2rem;
+	padding-top: 2rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
 }
