@@ -1,115 +1,161 @@
 .site-header {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3.2rem;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3.2rem;
 
-  background-color: grey;
-  margin-bottom: 2.4rem;
+	margin-bottom: 2.4rem;
+
+	margin: 50px 0;
+	background-color: #fff;
 }
 
 .site-title {
-  margin: 0;
+	margin: 0;
+	a {
+		color: $color-headings;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 35px;
+		letter-spacing: 1.45px;
+	}
 }
 
 .main-navigation ul {
-  display: block;
-  position: absolute;
-  right:0;
-  z-index:2;
-  // height: 0;
-  width: 100%;
-  transform: scaleY(0);
-  transform-origin: top;  
-  // width: 0;
-  overflow-y: hidden;
-  transition: transform 0.3s ease-in;
-  
-  background-color: grey;
+	display: block;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+	// height: 0;
+	width: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	// width: 0;
+	overflow-y: hidden;
+	transition: transform 0.3s ease-in;
+
+	background-color: grey;
 }
 
 .main-navigation.toggled ul {
-  transform: scaleY(1);
+	transform: scaleY(1);
 }
 
 .main-navigation li {
- position:relative;
+	position: relative;
 }
 
 .maria-pic {
-  height: 20px;
+	height: 20px;
 }
 
-//KUI MINNA ARVUTI VAATEST TAHVLISSE TEEB TA IKKAGI SELLE 0.3 
+//KUI MINNA ARVUTI VAATEST TAHVLISSE TEEB TA IKKAGI SELLE 0.3
 // animatsiooni
 
-// Small devices (landscape phones, 576px and up)  
+// Small devices (landscape phones, 576px and up)
 @media screen and (min-width: 576px) {
-  .main-navigation ul {
-    display: grid;
-    align-items: center;
-    text-align:  center;
-    grid-template-columns: 1fr 1fr 1fr;
-   }
-   
-  .main-navigation li {
-    line-height: 79px;
-    border-right:  1px solid darkgreen;
-    border-bottom: 1px solid darkgreen;
-  }
-    
-  .main-navigation a {
-  height: 100%;
-  }
+	.main-navigation ul {
+		display: grid;
+		align-items: center;
+		text-align: center;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.main-navigation li {
+		line-height: 79px;
+		border-right: 1px solid darkgreen;
+		border-bottom: 1px solid darkgreen;
+	}
+
+	.main-navigation a {
+		height: 100%;
+	}
 }
 
 // Medium devices (tablets, 768px and up)
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+	.menu-toggle {
+		display: none;
+	}
 
-  .main-navigation ul {
-    gap: 0 1.6rem;
-    height: auto;
-    width:  auto;
-    position: static;
-    overflow-y: auto;
-    transition: none;
-    transform: scaleY(1);
-    grid-auto-flow: column;
-    grid-template-columns: auto;
-  }
-  
-  .main-navigation li {
-    line-height: normal;
-    border: 0;
-   }
-   
-  // .menu-default-container {
-  //   position: static;
-  //   left: auto;
-  //  }
+	.main-navigation ul {
+		gap: 0 1.6rem;
+		height: auto;
+		width: auto;
+		position: static;
+		overflow-y: auto;
+		transition: none;
+		transform: scaleY(1);
+		grid-auto-flow: column;
+		grid-template-columns: auto;
+	}
 
-  // .main-navigation ul {
-  //   height: auto;
-  //   display: grid;
-  //   grid-auto-flow: column;
-  //   align-items: center;
-  //   justify-content: flex-end;
-  //   gap: 0 16px;
-  // }
+	.main-navigation li {
+		line-height: normal;
+		border: 0;
+	}
 
-  // .main-navigation.toggled ul {
-  //   grid-template-columns: auto;
-  // }
+	// .menu-default-container {
+	//   position: static;
+	//   left: auto;
+	//  }
+
+	// .main-navigation ul {
+	//   height: auto;
+	//   display: grid;
+	//   grid-auto-flow: column;
+	//   align-items: center;
+	//   justify-content: flex-end;
+	//   gap: 0 16px;
+	// }
+
+	// .main-navigation.toggled ul {
+	//   grid-template-columns: auto;
+	// }
 }
 
-  // Large devices (desktops, 992px and up)
-  @media screen and (min-width: 992px) {
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {
 }
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+.main-navigation ul {
+	background-color: transparent;
+	display: grid; /*wtf. pausi ajal muutus main menu display none-ks milelgipärast?? */
+}
+
+@media (min-width: 1200px) {
+	.main-navigation li {
+		padding-left: 32px;
+	}
+}
+
+.main-navigation a {
+	font-family: $font-main;
+	text-align: center;
+	white-space: nowrap;
+	margin: 0;
+	font-size: 23px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.45px;
+	color: rgb(27, 27, 27);
+}
+
+.main-navigation a:visited {
+	color: inherit;
+}
+
+li {
+	font-size: 2.5rem;
+	line-height: 1.8;
+	color: $color-body;
+	font-family: $font-main;
+	margin-bottom: 0;
+	list-style-position: outside;
 }

@@ -7,11 +7,11 @@ h6 {
 	line-height: 1.25;
 	font-weight: 400;
 	color: rgb(27, 27, 27);
-	font-family: var(----font-headings);
+	font-family: $font-main;
 }
 
 h1 {
-	margin: 0;
+	/* 	margin: 0; */
 	/* 	font-size: 4rem;
 	line-height: 4rem; */
 
@@ -29,18 +29,15 @@ h1 {
 }
 
 h2 {
-	margin: 0;
+	/* 	margin: 0;
 	font-size: 3.2rem;
-	line-height: 1;
+	line-height: 1; */
+	font-size: 28px;
+	margin-bottom: 24px;
 	a {
 		text-decoration: none;
 		display: block;
 	}
-}
-
-h2 {
-	font-size: 28px;
-	margin-bottom: 24px;
 }
 
 @media (min-width: 1200px) {
