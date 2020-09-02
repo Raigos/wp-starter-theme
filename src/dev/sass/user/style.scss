@@ -1,27 +1,36 @@
-//Vendors
-@import "../hamburger/hamburgers.scss";
-@import "_vendors";
+// Vendors
+@import "./vendors/hamburger/hamburgers.scss";
+@import "./vendors/vendors";
 
-@import "_variables.scss"; 
-@import "_navigation.scss"; 
-@import "_entryContent.scss"; 
-// @import "blog-archive-single.scss"; 
-@import "content-page.scss";
-@import "contact.scss";
-@import "_post.scss"; 
-@import "main.scss"; 
+// Base
+@import "./base/_variables.scss";
 
-@import "ninjaforms.scss"; 
-@import "_index.scss";
-@import "_container.scss"; 
-@import "_comments.scss"; 
-@import "_comment.scss"; 
-// ta võtab vahel topelt miks?
+// Typography
+@import "./typography/fonts";
+@import "./typography/copy";
+@import "./typography/headers";
+@import "./typography/body";
 
-@import "./base/typography/headers.scss";
-@import "./base/typography/_copy.scss";
+// Layout
+@import "./layout/container";
+@import "./layout/main";
+@import "./layout/navigation";
+@import "./layout/entryContent";
+@import "./layout/post";
 
-@import "_buttons.scss"; 
+// Conponents
+@import "./components/buttons";
+@import "./components/comments";
+@import "./components/comment";
+@import "./components/pagination";
 
+// Pages
+@import "./pages/content-page";
+@import "./pages/contact";
+/* @import "./pages/blog-archive-single"; */
 
-@import "_shame.scss"; 
+// Plugins
+@import "./plugins/ninjaforms";
+
+// Temp stuff
+@import "_shame";
